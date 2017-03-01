@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'wikis/index'
+
+  get 'wikis/new'
+
+  get 'wikis/create'
+
+  get 'wikis/update'
+
+  get 'wikis/edit'
+
+  get 'wikis/destroy'
+
+  get 'wikis/index'
+
+  get 'wikis/show'
+
   devise_for :users
   get 'welcome/index'
 
