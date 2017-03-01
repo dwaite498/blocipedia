@@ -17,7 +17,6 @@
  gem 'coffee-rails', '~> 4.1.0'
  gem 'jquery-rails'
  gem 'turbolinks'
- gem 'bootstrap'
  gem 'figaro'
 
 
@@ -33,3 +32,4 @@
  end
  
 gem 'bootstrap-sass'
+gem 'devise'

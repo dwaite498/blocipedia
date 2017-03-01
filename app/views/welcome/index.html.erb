@@ -1,2 +1,7 @@
 <h1>Welcome</h1>
-<p>Welcome to the page. This is a place holder for now.</p>
+
+<% if user_signed_in? %>
+<h2> link_to "Blocipedia" wikis_index_path </h2>
+<% else %>
+  <p>Welcome to Blocipedia! If you see no content, that means you have not signed in. If you haven't signed up yet, it is easy and free!</p>
+<% end %>
