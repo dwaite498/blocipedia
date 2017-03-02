@@ -1,14 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Wiki, type: :model do
-  let(:user) { create(:user) }
-  let(:wiki) { create(:wiki) }
-  
-  it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to validate_presence_of(:body) }
-  
-  it { is_expected.to validate_length_of(:title).is_at_least(5) }
-  it { is_expected.to validate_length_of(:body).is_at_least(25) }
+  let(:user) { User.create!(name: "Doom Hammer", email: "dhammer@blocipedia.com") }
+  let(:wiki) { Wiki.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
+
   
   describe "attributes" do
     it "has title and body attributes" do
