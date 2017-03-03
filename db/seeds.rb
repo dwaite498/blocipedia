@@ -6,11 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
   
+User.create!(
+  email: "User@email.com",
+  password: "password"
+  )
+
   
 10.times do
   Wiki.create!(
     title: RandomData.random_sentence,
-    body: RandomData.random_paragraph
+    body: RandomData.random_paragraph,
+    user_id: 1,
+    private: false
     )
 end
 
